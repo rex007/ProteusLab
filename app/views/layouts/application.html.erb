@@ -1,37 +1,64 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>ProteusLab</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "ProteusLab Web development and computer services" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+
 	<div class="header">
-		<p>test</p>
+		<div class="slider">
+			<p>test ki si</p>
+		</div>
+		
+
 
 		<div class="menu">
-			<ul>
-				<li>HOME</li>
-				<li>SERVICE</li>
-				<li>PEOPLE</li>
-
-
-			</ul>
-
+			<div data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<ul>
+						<li>HOME</li>
+						<li>SERVICES</li>
+						<li>DEVELOPERS</li>
+						<li>PROJECT</li>
+					</ul>
+				</dl>
+			</div>
+		</div>
+	
+	</div>
+	<div class="row">
+		<div class="large-12 columns">
+			<div class="panel">
+				<p>test</p>
+			</div>
 		</div>
 
 	</div>
 
-	<div class="content">
-		<%= yield %>
+
+
+	<div class="row">
+		<div class="large-12 columns">
+			<%= yield %>
+		</div>
 	</div>
 
 
-	<div class="footer">
-		<p>Copy by master</p>
 
-	</div>
 
-</body>
+
+
+
+
+    <%= javascript_include_tag "application" %>
+  </body>
 </html>

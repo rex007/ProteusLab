@@ -9,95 +9,34 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ //= require foundation_and_overrides
+
  *= require_tree .
  */
-
+html,body {
+	height:100%;
+	margin:0px;
+	padding:0px;
+}
 .header {
-	right: 0;
-	bottom: 0;
-
-	
-	position: absolute;
+	min-width: 100%;
 	min-height:100%;
-	min-width:100%;
-	background:#08CCC7;
+	background:red;
+	margin:0px;
+	padding:0px;
+
+	.slider {
+
+		background:yellow;
+		margin: 0px;
+		padding:0px;
+
+	}
 
 	.menu {
-		height: 100px;
 		width: 100%;
-		left: 0;
-		position:absolute;
-		bottom:0;
-		border: 0 solid black;
-		background: silver;
-
-		ul li {
-			display: inline;
-		}
-
+		position: absolute;
+		bottom: 0;
+		border:1px solid black;
 	}
-}
-.content {
-	margin: 100% auto;
-	background:#FBE130;
-	
-	height:400px;
-}
-.circle {
-	width:500px;
-	height:500px;
-	border:4px solid black;
-	
-	box-shadow:2px 3px 1px blue;
-
-	background:white;
-	position:absolute;
-	-webkit-border-radius:50%;
-	border-radius:50%;
-			transition: all 0.9s ease-in-out;				
-		
-		&:hover {
-			z-index: 5;
-
-			background:blue;
-			border:6px solid yellow;
-			box-shadow:2px 4px 5px yellow;
-			height: 600px;
-			width: 600px;
-
-			&:after:hover.circle2 {
-				background:black;
-			}
-
-
-		}
-
-	p {
-		text-align: center;
-		font-size: 18px;
-		position:relative;
-		margin: 30% auto;
-		font-weight: bold;
-
-	}
-
-}
-
-.circle2 {
-	z-index:2;
-	top:190%;
-	right:25%;
-	position:absolute;
-
-	float:right;
-	width:600px;
-	height:600px;
-	border:4px solid black;
-	
-	box-shadow:2px 3px 1px blue;
-
-	background:white;
-
-	-webkit-border-radius:50%;
-	border-radius:50%;
 }
